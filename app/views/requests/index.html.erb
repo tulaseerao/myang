@@ -1,0 +1,45 @@
+<h1>Listing requests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Request type</th>
+      <th>Requester</th>
+      <th>Organization</th>
+      <th>Site</th>
+      <th>Unit</th>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>Notes</th>
+      <th>Current State</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @requests.each do |request| %>
+      <tr>
+        <td><%= request.request_type %></td>
+        <td><%= request.requester %></td>
+        <td><%= request.organization %></td>
+        <td><%= request.site %></td>
+        <td><%= request.unit %></td>
+        <td><%= request.start_date %></td>
+        <td><%= request.end_date %></td>
+        <td><%= request.notes %></td>
+        <td><%= request.current_state %></td>
+
+        <td><%= link_to 'Show', request %></td>
+        <td><%= link_to 'Edit', edit_request_path(request) %></td>
+        <td><%= link_to 'Destroy', request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+         <td><%= link_to 'Approve',  request_approve_path(request) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Request', new_request_path %>

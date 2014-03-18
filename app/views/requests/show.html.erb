@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Request type:</strong>
+  <%= @request.request_type %>
+</p>
+
+<p>
+  <strong>Requester:</strong>
+  <%= @request.requester %>
+</p>
+
+<p>
+  <strong>Organization:</strong>
+  <%= @request.organization %>
+</p>
+
+<p>
+  <strong>Site:</strong>
+  <%= @request.site %>
+</p>
+
+<p>
+  <strong>Unit:</strong>
+  <%= @request.unit %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @request.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @request.end_date %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @request.notes %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @request.current_state %>
+</p>
+
+<%= link_to 'Edit', edit_request_path(@request) %> |
+<%= link_to 'Back', requests_path %>
