@@ -1,0 +1,4 @@
+myang
+=====
+
+Angular Rails example
