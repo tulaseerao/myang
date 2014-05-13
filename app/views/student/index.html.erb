@@ -1,0 +1,8 @@
+<div ng-controller="StudentCtrl">
+  <input type="text" ng-model='search' name='search'>
+  <div ng-repeat="stud in students | filter:search">
+    <p>{{stud.name}}</p>
+    <p>{{stud.email}}</p>
+  </div>
+  <a href="#" ng-click="mypost()">mypost</a>
+</div>

@@ -1,4 +1,8 @@
 Myang::Application.routes.draw do
+  get "stud_data", to: 'student#stud_data'
+   get "student", to: 'student#index'
+    post "poster", to: 'student#poster'
+
   resources :posts
 
   resources :requests do
